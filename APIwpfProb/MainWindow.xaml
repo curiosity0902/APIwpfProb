@@ -38,9 +38,9 @@
             Source="Image\png4.jpg\"/>
         
         <TextBox x:Name="TextBoxxx" TextWrapping="Wrap" Loaded="TextBox_Loaded"/>
-        <TextBlock x:Name="tb1" Grid.Column="1"/>
-        <TextBlock x:Name="tb2" Grid.Column="2"/>
-        <TextBlock x:Name="tb3"/>
-        <TextBlock x:Name="tb4"/>
+        <TextBlock x:Name="tb1" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock x:Name="tb2" Grid.Column="2" Grid.Row="2"/>
+        <TextBlock x:Name="tb3" Grid.Column="2" Grid.Row="3"/>
+        <TextBlock x:Name="tb4" Grid.Column="2" Grid.Row="4"/>
     </Grid>
 </Window>
