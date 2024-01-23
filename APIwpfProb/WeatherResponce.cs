@@ -14,5 +14,7 @@ namespace APIwpfProb
         class MainInfo
         {
             public float Temp { get; set; }
+            public string feels_like { get; set; }
+            public int pressure { get; set; }
         }
 }

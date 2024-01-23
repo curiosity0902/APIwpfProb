@@ -27,10 +27,12 @@ namespace APIwpfProb
         {
             InitializeComponent();
         }
-
-        private void TextBox_Loaded(object sender, RoutedEventArgs e)
+ 
+        private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            string url = "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=1cc53945dd6f158c393852119db967f0&units=metric";
+            string city1 = "Zocca";
+            string url = $"https://api.openweathermap.org/data/2.5/weather?q={city1}&appid=1cc53945dd6f158c393852119db967f0&units=metric";
+
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
 
             //ответ от сервера
@@ -38,12 +40,53 @@ namespace APIwpfProb
 
             StreamReader reader = new StreamReader(res.GetResponseStream());
             string response = reader.ReadToEnd();
-            TextBoxxx.Text = response;
+           
 
             WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
             tb1.Text = weatherResponse.Name;
             tb2.Text = weatherResponse.Main.Temp.ToString();
+            tb3.Text = weatherResponse.Main.feels_like.ToString();
+            tb4.Text = weatherResponse.Main.pressure.ToString();
+        }
 
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            string city2 = "Kazan"; 
+            string url1 = $"https://api.openweathermap.org/data/2.5/weather?q={city2}&appid=1cc53945dd6f158c393852119db967f0&units=metric";
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url1);
+
+            //ответ от сервера
+            HttpWebResponse res = (HttpWebResponse)req.GetResponse();
+
+            StreamReader reader = new StreamReader(res.GetResponseStream());
+            string response = reader.ReadToEnd();
+
+
+            WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
+            tb11.Text = weatherResponse.Name;
+            tb22.Text = weatherResponse.Main.Temp.ToString();
+            tb33.Text = weatherResponse.Main.feels_like.ToString();
+            tb44.Text = weatherResponse.Main.pressure.ToString();
+        }
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+            string city3 = "Seoul";
+            string url2 = $"https://api.openweathermap.org/data/2.5/weather?q={city3}&appid=1cc53945dd6f158c393852119db967f0&units=metric";
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url2);
+
+            //ответ от сервера
+            HttpWebResponse res = (HttpWebResponse)req.GetResponse();
+
+            StreamReader reader = new StreamReader(res.GetResponseStream());
+            string response = reader.ReadToEnd();
+
+
+            WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
+            tb1t.Text = weatherResponse.Name;
+            tb2t.Text = weatherResponse.Main.Temp.ToString();
+            tb3t.Text = weatherResponse.Main.feels_like.ToString();
+            tb4t.Text = weatherResponse.Main.pressure.ToString();
         }
     }
 }
