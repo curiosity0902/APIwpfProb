@@ -84,6 +84,6 @@
         <TextBlock  FontSize="16" FontFamily="Century Gothic" x:Name="city" Grid.Column="1" Grid.Row="1" Text="City" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
         <TextBlock  FontSize="16" FontFamily="Century Gothic" x:Name="temp" Grid.Column="2" Grid.Row="1" Text="Temperature" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
         <TextBlock  FontSize="16" FontFamily="Century Gothic" x:Name="feels_like" Grid.Column="3" Grid.Row="1" Text="Feels like" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-        <TextBlock  FontSize="16" FontFamily="Century Gothic" x:Name="visibility" Grid.Column="4" Grid.Row="1" Text="Visibility" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+        <TextBlock  FontSize="16" FontFamily="Century Gothic" x:Name="pressure" Grid.Column="4" Grid.Row="1" Text="Pressure" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
     </Grid>
 </Window>
